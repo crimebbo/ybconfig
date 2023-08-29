@@ -1,24 +1,6 @@
-{
-  "name": "order-service",
-  "profiles": [
-    "local"
-  ],
-  "label": "master",
-  "version": "93e0c93772d4c743eb888bcd9c14629eb1fa9551",
-  "state": null,
-  "propertySources": [
-    {
-      "name": "git@github.com:cheese10yun/msa-study-sample.git/order-service-local.yml",
-      "source": {
-        "message.profile": "local"
-      }
-    },
-    {
-      "name": "git@github.com:cheese10yun/msa-study-sample.git/order-service.yml",
-      "source": {
-        "message.profile": "default",
-        "message.server-name": "Config Server"
-      }
-    }
-  ]
-}
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/serverTimezone=Asia/Seoul&useSSL=false&characterEncoding=utf8&allowPublicKeyRetrieval=true
+    username: root
+    password: root
