@@ -1,6 +1,24 @@
-spring:
-  rabbitmq:
-    host: 3.36.113.36
-    port: 5672
-    username: guest
-    password: guest
+{
+  "name": "order-service",
+  "profiles": [
+    "local"
+  ],
+  "label": "master",
+  "version": "93e0c93772d4c743eb888bcd9c14629eb1fa9551",
+  "state": null,
+  "propertySources": [
+    {
+      "name": "git@github.com:cheese10yun/msa-study-sample.git/order-service-local.yml",
+      "source": {
+        "message.profile": "local"
+      }
+    },
+    {
+      "name": "git@github.com:cheese10yun/msa-study-sample.git/order-service.yml",
+      "source": {
+        "message.profile": "default",
+        "message.server-name": "Config Server"
+      }
+    }
+  ]
+}
